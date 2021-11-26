@@ -25,9 +25,9 @@ class HomePage extends StatelessWidget {
                 child: Text(
                   'ShopX',
                   style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w800,
-                  ),
+                      fontSize: 25,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.blue),
                 ),
               ),
               IconButton(
@@ -54,13 +54,19 @@ class HomePage extends StatelessWidget {
                 itemCount: productController.productList.length,
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
-                itemBuilder: (context, int index) => Container(
-                  // height: 100,
-                  // width: 100,
-                  color: Colors.indigo,
-                ),
+                // itemBuilder: (context, int index) => Container(
+                //   // height: 100,
+                //   // width: 100,
+                //   color: Colors.indigo,
+                // ),
+                itemBuilder: (context, int index) {
+                  return ProductTile(
+                    product: productController.productList[index],
+                  );
+                },
                 staggeredTileBuilder: (int index) =>
-                    const StaggeredTile.count(1, 1),
+                    // const StaggeredTile.count(1, 1),
+                    const StaggeredTile.fit(1),
                 // staggeredTileBuilder: (int index) => const StaggeredTile.fit(1),
               );
             }

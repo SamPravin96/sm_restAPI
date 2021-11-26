@@ -21,6 +21,7 @@ dependencies:
   http: ^0.13.4
 #  import 'package:http/http.dart' as http;
   flutter_staggered_grid_view: ^0.4.1
+  json_annotation: ^4.3.0
 
 dev_dependencies:
   flutter_test:
